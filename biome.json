@@ -1,0 +1,135 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+	"vcs": { "enabled": true, "clientKind": "git", "defaultBranch": "main" },
+	"files": {
+		"includes": [
+			"**",
+			"!src/types/**/*.d.ts",
+			"!src/shared/assets.*",
+			"!default.project.json",
+			"!sourcemap.json"
+		]
+	},
+	"formatter": { "expand": "never" },
+	"linter": {
+		"rules": {
+			"suspicious": {
+				"noShadowRestrictedNames": "off",
+				"noExplicitAny": "off",
+				"noConstantBinaryExpressions": "on",
+				"noConfusingVoidType": "off",
+				"noBitwiseOperators": "on",
+				"noVar": "on",
+				"noConstEnum": "off"
+			},
+			"correctness": { "noReactPropAssignments": "on" },
+			"style": {
+				"noExportedImports": "on",
+				"noNonNullAssertion": "off",
+				"noParameterAssign": "on",
+				"useAsConstAssertion": "on",
+				"useDefaultParameterLast": "on",
+				"useEnumInitializers": "off",
+				"useSelfClosingElements": "on",
+				"useSingleVarDeclarator": "on",
+				"noUnusedTemplateLiteral": "on",
+				"useNumberNamespace": "on",
+				"noInferrableTypes": "on",
+				"noUselessElse": "on",
+				"noNegationElse": "on",
+				"noYodaExpression": "on",
+				"useObjectSpread": "on",
+				"useCollapsedElseIf": "on",
+				"useConsistentArrayType": "on",
+				"useConsistentObjectDefinitions": "on",
+				"useConsistentMemberAccessibility": {
+					"level": "on",
+					"options": { "accessibility": "explicit" }
+				},
+				"useFilenamingConvention": {
+					"level": "on",
+					"options": { "filenameCases": ["kebab-case"] }
+				},
+				"useNamingConvention": {
+					"level": "on",
+					"options": {
+						"strictCase": false,
+						"requireAscii": true,
+						"conventions": [
+							{
+								"selector": { "kind": "enumMember", "scope": "any" },
+								"formats": ["snake_case"]
+							},
+							{
+								"selector": { "kind": "function", "scope": "any" },
+								"formats": ["snake_case", "PascalCase", "camelCase"]
+							},
+							{
+								"selector": { "kind": "importAlias", "scope": "any" },
+								"formats": ["snake_case", "PascalCase"]
+							},
+							{
+								"selector": { "kind": "exportAlias", "scope": "any" },
+								"formats": ["snake_case", "PascalCase"]
+							},
+							{
+								"selector": { "kind": "objectLiteralMethod", "scope": "any" },
+								"formats": ["snake_case", "camelCase", "PascalCase"]
+							},
+							{
+								"selector": { "kind": "objectLiteralMember", "scope": "any" },
+								"formats": ["snake_case", "camelCase", "PascalCase"]
+							},
+							{
+								"selector": { "kind": "namespaceLike", "scope": "any" },
+								"formats": ["PascalCase", "snake_case"]
+							},
+							{
+								"selector": { "kind": "typeParameter", "scope": "any" },
+								"formats": ["PascalCase"]
+							},
+							{
+								"selector": { "kind": "typeLike", "scope": "any" },
+								"formats": ["PascalCase"]
+							},
+							{
+								"selector": { "kind": "typeMember", "scope": "any" },
+								"formats": ["snake_case"]
+							},
+							{
+								"selector": { "kind": "const", "scope": "global" },
+								"formats": ["CONSTANT_CASE", "snake_case"]
+							},
+							{
+								"selector": { "kind": "any", "scope": "any" },
+								"formats": ["snake_case"]
+							}
+						]
+					}
+				},
+				"useShorthandAssign": "on"
+			},
+			"complexity": {
+				"noBannedTypes": "off",
+				"noExcessiveNestedTestSuites": "on",
+				"noForEach": "on",
+				"noUselessStringConcat": "on",
+				"useWhile": "on",
+				"noVoid": "on"
+			},
+			"nursery": {
+				"noUselessUndefined": "on",
+				"useExhaustiveSwitchCases": "on"
+			},
+			"performance": {
+				"noBarrelFile": "on",
+				"noDelete": "on",
+				"noAwaitInLoops": "on"
+			}
+		}
+	},
+	"javascript": {
+		"jsxRuntime": "reactClassic",
+		"formatter": { "semicolons": "always" }
+	}
+}

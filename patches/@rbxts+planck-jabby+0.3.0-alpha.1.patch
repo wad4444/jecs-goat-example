@@ -1,0 +1,11 @@
+diff --git a/node_modules/@rbxts/planck-jabby/src/init.luau b/node_modules/@rbxts/planck-jabby/src/init.luau
+index 829e145..f359ba5 100644
+--- a/node_modules/@rbxts/planck-jabby/src/init.luau
++++ b/node_modules/@rbxts/planck-jabby/src/init.luau
+@@ -1,4 +1,5 @@
+-local Jabby = require(script.Parent.Jabby)
++local TS = _G[script]
++local Jabby = TS.import(script, TS.getModule(script, "@rbxts", "jabby").out)
+ 
+ type SystemInfo = {
+ 	name: string,
