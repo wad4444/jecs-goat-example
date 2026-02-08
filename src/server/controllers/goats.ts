@@ -35,7 +35,7 @@ export namespace Goats {
 		world.set(goat_entity, ct.humanoid, goat_model.Humanoid);
 
 		world.set(goat_entity, ct.on_click, () => {
-			world.delete(goat_entity);
+			world.add(goat_entity, ct.destroy);
 		});
 
 		return goat_entity;
