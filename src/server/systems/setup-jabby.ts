@@ -1,8 +1,8 @@
 import jabby from "@rbxts/jabby";
 import { Phase } from "@rbxts/planck";
-import type { ClientState } from "client/main.client";
+import type { ServerState } from "server/main.server";
 
-function system({ world }: ClientState) {
+function system({ world }: ServerState) {
 	jabby.register({
 		applet: jabby.applets.world,
 		name: "world",
