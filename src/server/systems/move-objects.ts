@@ -2,7 +2,9 @@ import type { ServerState } from "server/main.server";
 import { ct } from "shared/components";
 
 function system({ world }: ServerState) {
-	for (const [, humanoid, position] of world.query(ct.humanoid, ct.position)) {
+	for (const [, humanoid, position] of world
+		.query(ct.humanoid, ct.position)
+		.with(ct.walking)) {
 		if (humanoid.WalkToPoint === position) continue;
 		humanoid.MoveTo(position);
 	}
