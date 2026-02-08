@@ -1,32 +1,30 @@
 {
-  "name": "rahhhhhhhhh",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "rbxtsc",
-    "watch": "rbxtsc -w"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@biomejs/biome": "^2.3.14",
-    "@rbxts/compiler-types": "^3.0.0-types.0",
-    "@rbxts/types": "^1.0.906",
-    "patch-package": "^8.0.1",
-    "roblox-ts": "^3.0.0",
-    "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@rbxts/jabby": "^0.4.1",
-    "@rbxts/jecs": "^0.9.0",
-    "@rbxts/jecs-utils": "^1.4.0",
-    "@rbxts/planck": "^0.3.0-alpha.2",
-    "@rbxts/planck-jabby": "^0.3.0-alpha.1",
-    "@rbxts/planck-runservice": "^1.0.3",
-    "@rbxts/services": "^1.6.0",
-    "@rbxts/t": "^3.2.1"
-  }
+	"name": "rahhhhhhhhh",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": { "build": "rbxtsc", "watch": "rbxtsc -w" },
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.14",
+		"@rbxts/compiler-types": "^3.0.0-types.0",
+		"@rbxts/types": "^1.0.906",
+		"patch-package": "^8.0.1",
+		"rbxts-transformer-jecs": "^0.0.9",
+		"roblox-ts": "^3.0.0",
+		"typescript": "^5.5.3"
+	},
+	"dependencies": {
+		"@rbxts/jabby": "^0.4.1",
+		"@rbxts/jecs": "^0.9.0",
+		"@rbxts/jecs-utils": "^1.4.0",
+		"@rbxts/planck": "^0.3.0-alpha.2",
+		"@rbxts/planck-jabby": "^0.3.0-alpha.1",
+		"@rbxts/planck-runservice": "^1.0.3",
+		"@rbxts/services": "^1.6.0",
+		"@rbxts/t": "^3.2.1"
+	}
 }

@@ -11,7 +11,7 @@ export function import_systems([root, path]: readonly [Instance, string[]]) {
 	for (const child of instance.GetChildren()) {
 		if (!child.IsA("ModuleScript")) continue;
 		const system = require(child) as { default: System<[SharedState]> };
-        systems.push(system.default);
+		systems.push(system.default);
 	}
 	return systems;
 }
