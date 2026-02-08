@@ -11,6 +11,10 @@ function system({ world }: SharedState) {
 		world.set(entity, ct.click_detector, detector_instance);
 		detector_instance.MouseClick.Connect(on_click);
 	}
+
+	for (const [entity] of world.query(ct.click_detector).without(ct.on_click)) {
+		world.remove(entity, ct.click_detector);
+	}
 }
 
 export default { name: "Clickables", system };
