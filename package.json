@@ -3,7 +3,11 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
-	"scripts": { "build": "rbxtsc", "watch": "rbxtsc -w", "postinstall": "npx patch-package" },
+	"scripts": {
+		"build": "rbxtsc",
+		"watch": "rbxtsc -w",
+		"postinstall": "npx patch-package"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
